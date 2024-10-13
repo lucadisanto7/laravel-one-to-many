@@ -28,6 +28,7 @@ class UpdateProjectRequest extends FormRequest
             'slug' => 'max:255',
             'image' => 'nullable|image|max:4084',
             'summary' => 'nullable',
+            'type_id' => 'nullable'
 
         ];
     }
