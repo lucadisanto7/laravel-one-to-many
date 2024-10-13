@@ -24,7 +24,14 @@ class StoreTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "name" => ['required', 'max:100'],
+        ];
+    }
+
+    public function messages(){
+        return[
+            "name.required" => "Il nome della tipologia e' obbligatorio",
+            "name.max" => "il nome della tipologia deve essere al massimo di :max caratteri",
         ];
     }
 }
