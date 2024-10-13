@@ -31,7 +31,13 @@
                         @else
                             <img src="https://plachehold.co/600x400?text=Immagine+copertina" alt="{{$project->name}}">
                         @endif
-                    </div>    
+                    </div>  
+                    <select name="type_id" id="" class="form form-select-sm">
+                        <option value="">Seleziona tipologia</option>
+                        @foreach ($types as $type)
+                            <option value="{{$type->id}}">{{$type->name}}</option>
+                        @endforeach
+                    </select>  
                     <div class="col-12">
                         <label for="" class="control-label">Sommario progetto</label>
                         <input type="text" name="name" id="" class="form-control form-control-sm" 
