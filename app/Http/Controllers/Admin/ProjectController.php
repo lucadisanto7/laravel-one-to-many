@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -30,7 +31,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view ('admin.projects.create');
+        $projects = Project::all();
+        return view ('admin.projects.create', compact('projects'));
     }
 
     /**
