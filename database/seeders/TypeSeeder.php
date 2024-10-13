@@ -14,6 +14,6 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $types = ['Frontend', 'Backend', 'Fullstack', 'Database', 'Design'];
     }
 }
